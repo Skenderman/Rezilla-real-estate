@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezilla - Real Estate</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="modern-normalization.css" />
+    <script
+      src="https://kit.fontawesome.com/ca9945fa9c.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+    />
+    <script>
+      new Splide(".splide").mount();
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var splide = new Splide(".splide", { type: "loop" });
+        splide.mount();
+      });
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- contact header -->
+    <div class="contact-container">
+      <div class="container contact-header">
+        <div id="adress">
+          <i class="fa-solid fa-location-dot"></i> Rezilla, 18 Grattan St,
+          Brooklyn
+        </div>
+        <div class="wrap">
+          <div id="number">
+            <i class="fa-solid fa-phone"></i> +1 206-214-2298
+          </div>
+          <div id="email">
+            <i class="fa-solid fa-envelope"></i> support@rezilla.com
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header class="header">
+      <div class="container header-flex">
+        <div id="left-side">
+          <ul id="nav-bar">
+            <li>Home</li>
+            <li>About</li>
+            <li>Listing</li>
+            <li>Services</li>
+            <li>Blogs</li>
+          </ul>
+        </div>
+
+        <div id="middle">
+          <button id="home-icon">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_2_3)">
+                <path
+                  d="M23.715 9.16499L12.465 0.164989C12.332 0.0584866 12.1667 0.000457764 11.9963 0.000457764C11.8258 0.000457764 11.6605 0.0584866 11.5275 0.164989L0.2775 9.16499C0.156135 9.26236 0.0680565 9.39506 0.025468 9.54471C-0.0171205 9.69436 -0.0121105 9.85356 0.0398037 10.0002C0.091718 10.1469 0.187966 10.2738 0.315214 10.3634C0.442461 10.4529 0.594407 10.5006 0.75 10.5H2.25V23.25C2.25 23.4489 2.32902 23.6397 2.46967 23.7803C2.61032 23.921 2.80109 24 3 24H18V22.5H15V15.75C15 15.5511 14.921 15.3603 14.7803 15.2197C14.6397 15.079 14.4489 15 14.25 15H9.75C9.55109 15 9.36032 15.079 9.21967 15.2197C9.07902 15.3603 9 15.5511 9 15.75V22.5H3.75V10.5H16.5V8.99999H2.8875L12 1.70999L21.1125 8.99999H21C20.8011 8.99999 20.6103 9.07901 20.4697 9.21966C20.329 9.36031 20.25 9.55108 20.25 9.74999V14.25H21.75V10.5H23.25C23.405 10.4991 23.5558 10.4502 23.6819 10.3601C23.8079 10.27 23.903 10.143 23.9539 9.9967C24.0049 9.85037 24.0093 9.69184 23.9665 9.54291C23.9237 9.39398 23.8359 9.26195 23.715 9.16499ZM10.5 16.5H13.5V22.5H10.5V16.5Z"
+                  fill="white"
+                />
+                <path
+                  d="M18.75 19.9425L17.7825 18.975L16.725 20.0325L18.225 21.5325C18.3655 21.6722 18.5556 21.7506 18.7538 21.7506C18.9519 21.7506 19.142 21.6722 19.2825 21.5325L23.7825 17.0325L22.725 15.975L18.75 19.9425Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_2_3">
+                  <rect width="24" height="24" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+          <p id="icon-text">Rezilla</p>
+        </div>
+
+        <div id="right-side">
+          <button id="login">
+            <i class="fa-regular fa-circle-user"></i> Login/Register
+          </button>
+          <button class="btn-primary">
+            <i class="fa-solid fa-house-user" style="color: #ffffff"></i> Add
+            Listing
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main>
+      <img id="eclipse" src="/img/Rectangle 4.png" />
+      <section>
+        <div class="container flex hero">
+          <div class="showcase">
+            <div class="showcase-txt">
+              <h3>REAL ESTATE</h3>
+              <h1>Find a perfect home you love..!</h1>
+              <p>
+                Etiam eget elementum elit. Aenean dignissim dapibus vestibulum.
+                Integer a dolor eu sapien sodales vulputate ac in purus.
+              </p>
+            </div>
+            <div class="splide slider">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <li class="splide__slide">
+                    <img src="/img/hotel 2.jpg" alt="hotel room" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="/img/hotel 3.jpg" alt="hotel room" />
+                  </li>
+                  <li class="splide__slide">
+                    <img src="/img/hotel 4.jpg" alt="hotel room" />
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="search-form">
+            <div class="sale-rent">
+              <button id="sale">For Sale</button>
+              <button id="rent">For Rent</button>
+            </div>
+            <div class="form">
+              <label for="city"></label>
+              <input
+                id="city"
+                name="city"
+                type="text"
+                placeholder="New York, San Francisco, etc"
+              />
+              <label for="property-type"></label>
+              <select name="property-type" id="property-type" required>
+                <option value="" disabled selected hidden>
+                  Select Property Type
+                </option>
+                <option value="residential">Residential</option>
+                <option value="commercial">Commercial</option>
+                <option value="industrial">Industrial</option>
+                <option value="raw-land">Raw Land</option>
+              </select>
+              <label for="room-type"></label>
+              <select name="room-type" id="room-type" required>
+                <option value="" disabled selected hidden>Select Rooms</option>
+                <option value="single">Single</option>
+                <option value="double">Double</option>
+                <option value="deluxe">Deluxe</option>
+                <option value="suite">Residential Suite</option>
+              </select>
+              <p><i class="fa-solid fa-sliders"></i> Advance Search</p>
+              <input type="submit" class="btn-primary" value="Search" />
+            </div>
+          </div>
+          <div class="costumers">
+            <img src="/img/Group 22.png" alt="" />
+            <img src="/img/Group 39.png" alt="" />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script>
+      new Splide("#image-carousel").mount();
+    </script>
+  </body>
+</html>
