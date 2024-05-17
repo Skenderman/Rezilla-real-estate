@@ -9,11 +9,11 @@ Document
 Use a better box model (opinionated).
 */
 
-*,
+/* *,
 ::before,
 ::after {
   box-sizing: border-box;
-}
+} */
 
 html {
   /* Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3) */
