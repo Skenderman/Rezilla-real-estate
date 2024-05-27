@@ -74,7 +74,6 @@
         }).mount();
       });
     </script>
-    <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="media-query.css" />
   </head>
@@ -102,11 +101,11 @@
       <div class="container header-flex">
         <div id="left-side">
           <ul id="nav-bar">
-            <li>Home</li>
-            <li>About</li>
-            <li>Listing</li>
-            <li>Services</li>
-            <li>Blogs</li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#property-listings-web">Listing</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blogs">Blogs</a></li>
           </ul>
         </div>
         <div id="middle">
@@ -127,14 +126,27 @@
         </div>
       </div>
       <div class="header-mobile">
-        <img src="./img/Group 86.svg" alt="" />
-        <i class="fa-solid fa-bars fa-xl"></i>
+        <div>
+          <img id="mobile-icon-menu" src="./img/Group 86.svg" alt="" />
+        </div>
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+        <ul class="nav-bar-mobile">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#property-listings-web">Listing</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#blogs">Blogs</a></li>
+        </ul>
       </div>
     </header>
 
     <!-- HERO SECTION -->
     <main>
-      <section>
+      <section id="home">
         <div id="hero-background">
           <div class="container hero">
             <div class="showcase">
@@ -201,41 +213,64 @@
               </div>
             </div>
           </div>
-
           <div class="costumer-listing">
-            <div class="group-22">
-              <div class="costumers">
-                <ul>
-                  <li>
-                    <img id="person1" src="./img/person1.jfif" alt="person1" />
-                  </li>
-                  <li>
-                    <img id="person2" src="./img/person2.jfif" alt="person2" />
-                  </li>
-                  <li>
-                    <img id="person2" src="./img/person3.jfif" alt="person2" />
-                  </li>
-                  <li>
-                    <img id="person2" src="./img/person4.jfif" alt="person2" />
-                  </li>
-                  <li>
-                    <img id="person3" src="./img/Group 19.svg" alt="person2" />
-                  </li>
-                </ul>
+            <a href="#costumer-reviews-real-estate">
+              <div class="group-22">
+                <div class="costumers">
+                  <ul>
+                    <li>
+                      <img
+                        id="person1"
+                        src="./img/person1.jfif"
+                        alt="person1"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        id="person2"
+                        src="./img/person2.jfif"
+                        alt="person2"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        id="person2"
+                        src="./img/person3.jfif"
+                        alt="person2"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        id="person2"
+                        src="./img/person4.jfif"
+                        alt="person2"
+                      />
+                    </li>
+                    <li>
+                      <img
+                        id="person3"
+                        src="./img/Group 19.svg"
+                        alt="person2"
+                      />
+                    </li>
+                  </ul>
+                </div>
+                <div class="costumer-txt">
+                  <p>72k+ Happy Customers</p>
+                </div>
               </div>
-              <div class="costumer-txt">
-                <p>72k+ Happy Customers</p>
+            </a>
+            <a href="#porperty-type-listings">
+              <div class="group-39">
+                <div class="house">
+                  <img
+                    src="./img/pexels-pixabay-208736.jpg"
+                    alt="mansion for sale"
+                  />
+                  <p>200+ New Listings Everyday!</p>
+                </div>
               </div>
-            </div>
-            <div class="group-39">
-              <div class="house">
-                <img
-                  src="./img/pexels-pixabay-208736.jpg"
-                  alt="mansion for sale"
-                />
-                <p>200+ New Listings Everyday!</p>
-              </div>
-            </div>
+            </a>
           </div>
         </div>
       </section>
@@ -261,7 +296,7 @@
       </section>
     </main>
     <!-- WHO ARE WE -->
-    <section class="section">
+    <section class="section" id="about">
       <div class="container waw">
         <div class="waw-left">
           <h3>WHO ARE WE</h3>
@@ -299,7 +334,7 @@
         </div>
       </div>
     </section>
-    <section class="container section">
+    <section class="container section" id="property-listings-web">
       <div class="s3">
         <div id="s3-l">
           <h3>CHECKOUT OUR NEW</h3>
@@ -310,12 +345,13 @@
           </p>
         </div>
         <div id="s3-r">
-          <button class="btn-outline">All</button>
+          <button class="btn-outline" id="listing">All</button>
           <button class="btn-primary">Sell</button>
           <button class="btn-outline">Rent</button>
         </div>
       </div>
     </section>
+
     <div class="s4">
       <div class="scrolling-wrapper">
         <!-- TODO: Fix the bed and bath images -->
@@ -470,7 +506,7 @@
         <button class="btn-outline view-more">View more properties</button>
       </div>
     </div>
-    <section class="section se55">
+    <section class="section se55" id="services">
       <div class="container">
         <div class="se5">
           <p id="services">OUR SERVICES</p>
@@ -516,20 +552,58 @@
         </div>
       </div>
     </section>
-    <section class="section">
+    <section class="section" id="porperty-type-listings">
       <div class="container">
         <div class="se6-txt">
           <h4>AREAS ACROSS THE TOWN</h4>
           <h2>Neighborhood Properties</h2>
         </div>
         <div class="se6-row1">
-          <img src="./img/nyc.jpg" alt="new york city house" />
-          <img src="./img/huston.jpg" alt="huston house" />
-          <img src="./img/san diego.jpg" alt="san diego house" />
-        </div>
-        <div class="se6-row2">
-          <img src="./img/philadelphia.jpg" alt="" />
-          <img src="./img/San Francisco.jpg" alt="" />
+          <div>
+            <div class="relative-div">
+              <img src="./img/nyc.jpg" alt="New York City, NY" />
+              <div class="property-address">
+                <h2>216</h2>
+                <h4>New York City, NY</h4>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="relative-div">
+              <img src="./img/huston.jpg" alt="Huston, TX" />
+              <div class="property-address">
+                <h2>141</h2>
+                <h4>Huston, TX</h4>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="relative-div">
+              <img src="./img/san diego.jpg" alt="San Diego, CA" />
+              <div class="property-address">
+                <h2>212</h2>
+                <h4>San Diego, CA</h4>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="relative-div">
+              <img src="./img/philadelphia.jpg" alt="Philadelphia, PA" />
+              <div class="property-address">
+                <h2>183</h2>
+                <h4>Philadelphia, PA</h4>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="relative-div">
+              <img src="./img/San Francisco.jpg" alt="San Francisco, CA" />
+              <div class="property-address">
+                <h2>112</h2>
+                <h4>San Francisco, CA</h4>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -567,7 +641,7 @@
         </div>
       </div>
     </section>
-    <section class="section se8-background">
+    <section class="section se8-background" id="blogs">
       <div class="se8">
         <h4>WHAT'S TRENDING</h4>
         <h2>Latest Blogs & Posts</h2>
@@ -744,7 +818,7 @@
         </div>
       </div>
     </section>
-    <section class="section container">
+    <section class="section container" id="costumer-reviews-real-estate">
       <div class="se9-wrapper">
         <div class="se9-left">
           <h4 id="testimonials">TESTIMONIALS</h4>
@@ -921,5 +995,6 @@
         </div>
       </div>
     </footer>
+    <script src="scripts.js"></script>
   </body>
 </html>

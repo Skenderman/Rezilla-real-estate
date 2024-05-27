@@ -160,7 +160,7 @@
   }
 }
 /* TABLETS */
-@media (max-width: 768px) {
+@media (max-width: 904px) {
   .container {
     max-width: 768px;
   }
@@ -265,13 +265,8 @@
   .se6-row1 img {
     height: 200px;
   }
-  .se6-row2 {
-    grid-template-columns: 272px 418px;
-    column-gap: 20px;
-    padding: 0 20px;
-  }
-  .se6-row2 img {
-    height: 200px;
+  .property-address h2 {
+    font-size: var(--text-h2);
   }
   .se7-card-wrapper {
     display: grid;
@@ -353,7 +348,7 @@
     width: 40px;
   }
 }
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .container {
     max-width: 425px;
   }
@@ -371,12 +366,62 @@
     align-items: center;
     padding: 20px 30px;
     justify-content: space-between;
+    max-height: 80px;
   }
   .header-mobile img {
     width: 125px;
     height: 50px;
     position: sticky;
     top: 0;
+  }
+  .hamburger {
+    cursor: pointer;
+    display: block;
+  }
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    color: black;
+    background-color: black;
+  }
+  #mobile-icon-menu.active {
+    display: none;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-bar-mobile {
+    display: flex;
+    position: fixed;
+    background-color: white;
+    position: fixed;
+    left: -400px;
+    top: 15px;
+    font-size: var(--text-small);
+    width: 100%;
+    max-width: 300px;
+    transition: 0.3s;
+  }
+  .nav-bar-mobile.active {
+    left: 10px;
+  }
+  .nav-bar-mobile li {
+    padding: 10px;
+  }
+  .nav-bar-mobile li:active,
+  .nav-bar-mobile li:hover {
+    background-color: rgba(67, 97, 238, 0.3);
+    border-radius: 50px;
   }
   #hero-background {
     padding: 10px 30px;
@@ -526,10 +571,23 @@
     margin-top: 10px;
     margin-bottom: 40px;
   }
-  .se6-row1,
-  .se6-row2 {
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
+  .se6-row1 {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .se6-row1 > div {
+    width: 155px;
+    height: 155px;
+    margin-bottom: 45px;
+  }
+  .property-address {
+    left: 20px;
+  }
+  .property-address h2 {
+    font-size: var(--text-h3);
+  }
+  .property-address h4 {
+    font-size: var(--text-small);
   }
   .se7 {
     padding: 0 30px;
