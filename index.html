@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Rezilla - Real Estate</title>
     <link
       rel="apple-touch-icon"
@@ -51,11 +51,12 @@
           gap: "3.125rem",
           autoHeight: true,
           breakpoints: {
-            768: {
-              perPage: 2,
+            1024: {
+              perPage: 3,
+              width: "100%",
             },
-            480: {
-              perPage: 1,
+            768: {
+              perPage: 3,
             },
           },
         }).mount();
@@ -69,11 +70,13 @@
           height: "23rem",
           wheel: true,
           pagination: false,
+          perPage: 1,
         }).mount();
       });
     </script>
     <script src="scripts.js"></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="media-query.css" />
   </head>
   <body>
     <!-- contact header -->
@@ -106,144 +109,133 @@
             <li>Blogs</li>
           </ul>
         </div>
-
         <div id="middle">
           <button id="home-icon">
-            <svg
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_2_3)">
-                <path
-                  d="M23.715 9.16499L12.465 0.164989C12.332 0.0584866 12.1667 0.000457764 11.9963 0.000457764C11.8258 0.000457764 11.6605 0.0584866 11.5275 0.164989L0.2775 9.16499C0.156135 9.26236 0.0680565 9.39506 0.025468 9.54471C-0.0171205 9.69436 -0.0121105 9.85356 0.0398037 10.0002C0.091718 10.1469 0.187966 10.2738 0.315214 10.3634C0.442461 10.4529 0.594407 10.5006 0.75 10.5H2.25V23.25C2.25 23.4489 2.32902 23.6397 2.46967 23.7803C2.61032 23.921 2.80109 24 3 24H18V22.5H15V15.75C15 15.5511 14.921 15.3603 14.7803 15.2197C14.6397 15.079 14.4489 15 14.25 15H9.75C9.55109 15 9.36032 15.079 9.21967 15.2197C9.07902 15.3603 9 15.5511 9 15.75V22.5H3.75V10.5H16.5V8.99999H2.8875L12 1.70999L21.1125 8.99999H21C20.8011 8.99999 20.6103 9.07901 20.4697 9.21966C20.329 9.36031 20.25 9.55108 20.25 9.74999V14.25H21.75V10.5H23.25C23.405 10.4991 23.5558 10.4502 23.6819 10.3601C23.8079 10.27 23.903 10.143 23.9539 9.9967C24.0049 9.85037 24.0093 9.69184 23.9665 9.54291C23.9237 9.39398 23.8359 9.26195 23.715 9.16499ZM10.5 16.5H13.5V22.5H10.5V16.5Z"
-                  fill="white"
-                />
-                <path
-                  d="M18.75 19.9425L17.7825 18.975L16.725 20.0325L18.225 21.5325C18.3655 21.6722 18.5556 21.7506 18.7538 21.7506C18.9519 21.7506 19.142 21.6722 19.2825 21.5325L23.7825 17.0325L22.725 15.975L18.75 19.9425Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_2_3">
-                  <rect width="24" height="24" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
+            <img src="./img/reshot-icon-house-XJ53QBRVTC 1.svg" alt="" />
           </button>
           <p id="icon-text">Rezilla</p>
         </div>
 
-        <div id="right-side">
+        <div id="right">
           <button id="login">
             <i class="fa-regular fa-circle-user"></i> Login/Register
           </button>
-          <button class="btn-primary">
+          <button id="listing" class="btn-primary">
             <i class="fa-solid fa-house-user" style="color: #ffffff"></i> Add
             Listing
           </button>
         </div>
       </div>
+      <div class="header-mobile">
+        <img src="./img/Group 86.svg" alt="" />
+        <i class="fa-solid fa-bars fa-xl"></i>
+      </div>
     </header>
 
     <!-- HERO SECTION -->
     <main>
-      <img id="eclipse" src="/img/Rectangle 4.png" />
       <section>
-        <div class="container flex hero">
-          <div class="showcase">
-            <div class="showcase-txt">
-              <h3>REAL ESTATE</h3>
-              <h1>Find a perfect home you love..!</h1>
-              <p>
-                Etiam eget elementum elit. Aenean dignissim dapibus vestibulum.
-                Integer a dolor eu sapien sodales vulputate ac in purus.
-              </p>
+        <div id="hero-background">
+          <div class="container hero">
+            <div class="showcase">
+              <div class="showcase-txt">
+                <h3>REAL ESTATE</h3>
+                <h1>Find a perfect home you love..!</h1>
+                <p>
+                  Etiam eget elementum elit. Aenean dignissim dapibus
+                  vestibulum. Integer a dolor eu sapien sodales vulputate ac in
+                  purus.
+                </p>
+              </div>
+              <div class="splide slider">
+                <div class="splide__track">
+                  <ul class="splide__list">
+                    <li class="splide__slide">
+                      <img src="./img/hotel 2.jpg" alt="hotel room" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./img/hotel 3.jpg" alt="hotel room" />
+                    </li>
+                    <li class="splide__slide">
+                      <img src="./img/hotel 4.jpg" alt="hotel room" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div class="splide slider">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <img src="/img/hotel 2.jpg" alt="hotel room" />
-                  </li>
-                  <li class="splide__slide">
-                    <img src="/img/hotel 3.jpg" alt="hotel room" />
-                  </li>
-                  <li class="splide__slide">
-                    <img src="/img/hotel 4.jpg" alt="hotel room" />
-                  </li>
-                </ul>
+            <div class="search-form">
+              <div class="sale-rent">
+                <button id="sale">For Sale</button>
+                <button id="rent">For Rent</button>
+              </div>
+              <div class="form">
+                <label for="city"></label>
+                <input
+                  id="city"
+                  name="city"
+                  type="text"
+                  placeholder="New York, San Francisco, etc"
+                />
+                <label for="property-type"></label>
+                <select name="property-type" id="property-type" required>
+                  <option value="" disabled selected hidden>
+                    Select Property Type
+                  </option>
+                  <option value="residential">Residential</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="industrial">Industrial</option>
+                  <option value="raw-land">Raw Land</option>
+                </select>
+                <label for="room-type"></label>
+                <select name="room-type" id="room-type" required>
+                  <option value="" disabled selected hidden>
+                    Select Rooms
+                  </option>
+                  <option value="single">Single</option>
+                  <option value="double">Double</option>
+                  <option value="deluxe">Deluxe</option>
+                  <option value="suite">Residential Suite</option>
+                </select>
+                <p><i class="fa-solid fa-sliders"></i> Advance Search</p>
+                <input type="submit" class="btn-primary" value="Search" />
               </div>
             </div>
           </div>
-          <div class="search-form">
-            <div class="sale-rent">
-              <button id="sale">For Sale</button>
-              <button id="rent">For Rent</button>
+
+          <div class="costumer-listing">
+            <div class="group-22">
+              <div class="costumers">
+                <ul>
+                  <li>
+                    <img id="person1" src="./img/person1.jfif" alt="person1" />
+                  </li>
+                  <li>
+                    <img id="person2" src="./img/person2.jfif" alt="person2" />
+                  </li>
+                  <li>
+                    <img id="person2" src="./img/person3.jfif" alt="person2" />
+                  </li>
+                  <li>
+                    <img id="person2" src="./img/person4.jfif" alt="person2" />
+                  </li>
+                  <li>
+                    <img id="person3" src="./img/Group 19.svg" alt="person2" />
+                  </li>
+                </ul>
+              </div>
+              <div class="costumer-txt">
+                <p>72k+ Happy Customers</p>
+              </div>
             </div>
-            <div class="form">
-              <label for="city"></label>
-              <input
-                id="city"
-                name="city"
-                type="text"
-                placeholder="New York, San Francisco, etc"
-              />
-              <label for="property-type"></label>
-              <select name="property-type" id="property-type" required>
-                <option value="" disabled selected hidden>
-                  Select Property Type
-                </option>
-                <option value="residential">Residential</option>
-                <option value="commercial">Commercial</option>
-                <option value="industrial">Industrial</option>
-                <option value="raw-land">Raw Land</option>
-              </select>
-              <label for="room-type"></label>
-              <select name="room-type" id="room-type" required>
-                <option value="" disabled selected hidden>Select Rooms</option>
-                <option value="single">Single</option>
-                <option value="double">Double</option>
-                <option value="deluxe">Deluxe</option>
-                <option value="suite">Residential Suite</option>
-              </select>
-              <p><i class="fa-solid fa-sliders"></i> Advance Search</p>
-              <input type="submit" class="btn-primary" value="Search" />
+            <div class="group-39">
+              <div class="house">
+                <img
+                  src="./img/pexels-pixabay-208736.jpg"
+                  alt="mansion for sale"
+                />
+                <p>200+ New Listings Everyday!</p>
+              </div>
             </div>
-          </div>
-        </div>
-      </section>
-      <section class="costumer-listing">
-        <div class="group-22">
-          <div class="costumers">
-            <ul>
-              <li>
-                <img id="person1" src="/img/person1.jfif" alt="person1" />
-              </li>
-              <li>
-                <img id="person2" src="/img/person2.jfif" alt="person2" />
-              </li>
-              <li>
-                <img id="person2" src="/img/person3.jfif" alt="person2" />
-              </li>
-              <li>
-                <img id="person2" src="/img/person4.jfif" alt="person2" />
-              </li>
-              <li>
-                <img id="person2" src="/img/person5.jfif" alt="person2" />
-              </li>
-            </ul>
-          </div>
-          <div class="costumer-txt">
-            <p>72k+ Happy Customers</p>
-          </div>
-        </div>
-        <div class="group-39">
-          <div class="house">
-            <img src="/img/pexels-pixabay-208736.jpg" alt="mansion for sale" />
-            <p>200+ New Listings Everyday!</p>
           </div>
         </div>
       </section>
@@ -254,15 +246,15 @@
             <ul>
               <li>
                 <img
-                  src="/img/google-logo-png-google-sva-scholarship-20.png"
+                  src="./img/google-logo-png-google-sva-scholarship-20.png"
                   alt=""
                 />
               </li>
-              <li><img src="/img/amazon.png" alt="" /></li>
-              <li><img src="/img/logitech.png" alt="" /></li>
-              <li><img src="/img/spotify.png" alt="" /></li>
-              <li><img src="/img/samsung.png" alt="" /></li>
-              <li><img src="/img/netflix.png" alt="" /></li>
+              <li><img src="./img/amazon.png" alt="" /></li>
+              <li><img src="./img/logitech.png" alt="" /></li>
+              <li><img src="./img/spotify.png" alt="" /></li>
+              <li><img src="./img/samsung.png" alt="" /></li>
+              <li><img src="./img/netflix.png" alt="" /></li>
             </ul>
           </div>
         </div>
@@ -301,13 +293,9 @@
           </div>
         </div>
         <div class="waw-right">
-          <div class="waw-right-1">
-            <img src="/img/Rectangle 14.png" alt="" />
-          </div>
-          <div class="waw-right-2">
-            <img src="/img/Rectangle 15.png" alt="" />
-            <img src="/img/Rectangle 16.png" alt="" />
-          </div>
+          <img src="./img/rectangle 14.jpg" alt="" />
+          <img src="./img/rectangle 15.jpg" alt="" />
+          <img src="./img/rectangle 16.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -333,7 +321,7 @@
         <!-- TODO: Fix the bed and bath images -->
         <div class="card">
           <div class="relative-div">
-            <img src="/img/Rectangle 18.png" alt="" />
+            <img src="./img/Rectangle 18.png" alt="" />
             <div class="card-tag-popular">
               <i
                 class="fa-solid fa-fire-flame-curved"
@@ -346,13 +334,13 @@
           <h4>Tranquil Haven in the Woods</h4>
           <p>103 Wright CourtBurien, WA 98168</p>
           <p>
-            <img src="/img/bed.png" alt="" /> 4 Beds &nbsp;
-            <img src="/img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
+            <img src="./img/bed.png" alt="" /> 4 Beds &nbsp;
+            <img src="./img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
           </p>
         </div>
         <div class="card">
           <div class="relative-div">
-            <img src="/img/Rectangle 19.png" alt="" />
+            <img src="./img/Rectangle 19.png" alt="" />
             <div class="card-tag-listing">
               <i
                 class="fa-solid fa-fire-flame-curved"
@@ -365,13 +353,13 @@
           <h4>Serene Retreat by the Lake</h4>
           <p>1964 Jehovah Drive, VA 22408</p>
           <p>
-            <img src="/img/bed.png" alt="" /> 3 Beds &nbsp;
-            <img src="/img/🦆 icon _bathroom_.png" alt="" /> 2 Bath
+            <img src="./img/bed.png" alt="" /> 3 Beds &nbsp;
+            <img src="./img/🦆 icon _bathroom_.png" alt="" /> 2 Bath
           </p>
         </div>
         <div class="card">
           <div class="relative-div">
-            <img src="/img/Rectangle 20.png" alt="" />
+            <img src="./img/Rectangle 20.png" alt="" />
             <div class="card-tag-discount">
               <span class="discount"
                 ><i class="fa-solid fa-dollar-sign"></i> Discounted Price</span
@@ -382,13 +370,13 @@
           <h4>Charming Cottage in the Meadow</h4>
           <p>1508 Centennial Farm RoadHarlan, 51537</p>
           <p>
-            <img src="/img/bed.png" alt="" /> 4 Beds &nbsp;
-            <img src="/img/🦆 icon _bathroom_.png" alt="" /> 4 Bath
+            <img src="./img/bed.png" alt="" /> 4 Beds &nbsp;
+            <img src="./img/🦆 icon _bathroom_.png" alt="" /> 4 Bath
           </p>
         </div>
         <div class="card">
           <div class="relative-div">
-            <img src="/img/pixasquare-4ojhpgKpS68-unsplash.jpg" alt="" />
+            <img src="./img/pixasquare-4ojhpgKpS68-unsplash.jpg" alt="" />
             <div class="card-tag-popular">
               <i
                 class="fa-solid fa-fire-flame-curved"
@@ -401,13 +389,13 @@
           <h4>Grand Estate on the Hilltop</h4>
           <p>103 Wright CourtBurien, WA 98168</p>
           <p>
-            <img src="/img/bed.png" alt="" /> 4 Beds &nbsp;
-            <img src="/img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
+            <img src="./img/bed.png" alt="" /> 4 Beds &nbsp;
+            <img src="./img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
           </p>
         </div>
-        <div class="card">
+        <div class="card" id="hide">
           <div class="relative-div">
-            <img src="/img/home 5.jpg" alt="" />
+            <img src="./img/home 5.jpg" alt="" />
             <div class="card-tag-discount">
               <span class="discount"
                 ><i class="fa-solid fa-dollar-sign"></i> Discounted Price</span
@@ -418,13 +406,13 @@
           <h4>Woods Haven in the Tranquil</h4>
           <p>103 Wright CourtBurien, WA 98168</p>
           <p>
-            <img src="/img/bed.png" alt="" /> 4 Beds &nbsp;
-            <img src="/img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
+            <img src="./img/bed.png" alt="" /> 4 Beds &nbsp;
+            <img src="./img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
           </p>
         </div>
-        <div class="card">
+        <div class="card" id="hide">
           <div class="relative-div">
-            <img src="/img/home 6.jpg" alt="" />
+            <img src="./img/home 6.jpg" alt="" />
             <div class="card-tag-popular">
               <i
                 class="fa-solid fa-fire-flame-curved"
@@ -437,13 +425,13 @@
           <h4>Modernity in the Wilderness</h4>
           <p>Tophane Prishtine, T7 / H10</p>
           <p>
-            <img src="/img/bed.png" alt="" /> 2 Beds &nbsp;
-            <img src="/img/🦆 icon _bathroom_.png" alt="" /> 2 Bath
+            <img src="./img/bed.png" alt="" /> 2 Beds &nbsp;
+            <img src="./img/🦆 icon _bathroom_.png" alt="" /> 2 Bath
           </p>
         </div>
-        <div class="card">
+        <div class="card" id="hide">
           <div class="relative-div">
-            <img src="/img/home 7.jpg" alt="" />
+            <img src="./img/home 7.jpg" alt="" />
             <div class="card-tag-popular">
               <i
                 class="fa-solid fa-fire-flame-curved"
@@ -456,13 +444,13 @@
           <h4>Tranquil Haven in the Woods</h4>
           <p>103 Wright CourtBurien, WA 98168</p>
           <p>
-            <img src="/img/bed.png" alt="" /> 4 Beds &nbsp;
-            <img src="/img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
+            <img src="./img/bed.png" alt="" /> 4 Beds &nbsp;
+            <img src="./img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
           </p>
         </div>
-        <div class="card">
+        <div class="card" id="hide">
           <div class="relative-div">
-            <img src="/img/home 8.jpg" alt="" />
+            <img src="./img/home 8.jpg" alt="" />
             <div class="card-tag-listing">
               <i
                 class="fa-solid fa-fire-flame-curved"
@@ -475,10 +463,11 @@
           <h4>Lorem ipsum dolor sit amet.</h4>
           <p>103 Wright CourtBurien, WA 98168</p>
           <p>
-            <img src="/img/bed.png" alt="" /> 4 Beds &nbsp;
-            <img src="/img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
+            <img src="./img/bed.png" alt="" /> 4 Beds &nbsp;
+            <img src="./img/🦆 icon _bathroom_.png" alt="" /> 3 Bath
           </p>
         </div>
+        <button class="btn-outline view-more">View more properties</button>
       </div>
     </div>
     <section class="section se55">
@@ -502,7 +491,7 @@
             <div class="service-card">
               <div class="card-content">
                 <button>
-                  <img src="/img/house.svg" alt="" />
+                  <img src="./img/house.svg" alt="" />
                 </button>
                 <h4>Sell a House</h4>
                 <p>
@@ -514,7 +503,7 @@
             <div class="service-card">
               <div class="card-content">
                 <button>
-                  <img src="/img/bedsvg.svg" alt="" />
+                  <img src="./img/bedsvg.svg" alt="" />
                 </button>
                 <h4>Rent a House</h4>
                 <p>
@@ -534,13 +523,13 @@
           <h2>Neighborhood Properties</h2>
         </div>
         <div class="se6-row1">
-          <img src="/img/nyc.jpg" alt="new york city house" />
-          <img src="/img/huston.jpg" alt="huston house" />
-          <img src="/img/san diego.jpg" alt="san diego house" />
+          <img src="./img/nyc.jpg" alt="new york city house" />
+          <img src="./img/huston.jpg" alt="huston house" />
+          <img src="./img/san diego.jpg" alt="san diego house" />
         </div>
         <div class="se6-row2">
-          <img src="/img/philadelphia.jpg" alt="" />
-          <img src="/img/San Francisco.jpg" alt="" />
+          <img src="./img/philadelphia.jpg" alt="" />
+          <img src="./img/San Francisco.jpg" alt="" />
         </div>
       </div>
     </section>
@@ -550,13 +539,13 @@
         <h2>Our Team of Experts</h2>
         <div class="se7-card-wrapper">
           <div class="se7-card">
-            <img src="/img/CEO.jpg" alt="Brandon M CEO" />
+            <img src="./img/CEO.jpg" alt="Brandon M CEO" />
             <h3>Brendon M</h3>
             <h5>CEO & Founder</h5>
           </div>
           <div class="se7-card">
             <img
-              src="/img/Real-estate-dev.jpg"
+              src="./img/Real-estate-dev.jpg"
               alt="Jodi Appleby Real-estate-dev"
             />
             <h3>Jodi J. Appleby</h3>
@@ -564,14 +553,14 @@
           </div>
           <div class="se7-card">
             <img
-              src="/img/Listing agent.jpg"
+              src="./img/Listing agent.jpg"
               alt="Justin S. Meza Listing Agent"
             />
             <h3>Justin S. Meza</h3>
             <h5>Listing Agent</h5>
           </div>
           <div class="se7-card">
-            <img src="/img/Buyers Agent.jpg" alt="Susan Buyer's Agent" />
+            <img src="./img/Buyers Agent.jpg" alt="Susan Buyer's Agent" />
             <h3>Susan</h3>
             <h5>Buyer's Agent</h5>
           </div>
@@ -579,126 +568,178 @@
       </div>
     </section>
     <section class="section se8-background">
-      <div class="se8 container">
+      <div class="se8">
         <h4>WHAT'S TRENDING</h4>
         <h2>Latest Blogs & Posts</h2>
-        <div class="se8-blog-wrapper">
-          <div id="cards-slider" class="splide">
-            <div class="splide__track">
-              <ul class="splide__list">
-                <li class="splide__slide se8-card">
-                  <div class="relative-div">
-                    <img src="/img/blog1.jpg" alt="" />
-                    <div class="date">
-                      <p id="day-date">28</p>
-                      <p>Tue</p>
-                    </div>
-                  </div>
-                  <h3>Top 10 Home Buying Mistakes to Avoid</h3>
-                  <p>
-                    Etiam eget elementum elit. Aenean dignissim dapibus
-                    vestibulum
-                  </p>
-                  <div class="button-wrapper">
-                    <button class="read-more">
-                      <i
-                        class="fa-solid fa-arrow-right-long"
-                        style="color: #3a0ca3"
-                      ></i>
-                    </button>
-                  </div>
-                </li>
-                <li class="splide__slide se8-card">
-                  <div class="relative-div">
-                    <img src="/img/blog2.jpg" alt="" />
-                    <div class="date">
-                      <p id="day-date">08</p>
-                      <p>Mon</p>
-                    </div>
-                  </div>
-                  <h3>How to Stage Your Home for a Quick Sale</h3>
-                  <p>
-                    Etiam eget elementum elit. Aenean dignissim dapibus
-                    vestibulum
-                  </p>
-                  <div class="button-wrapper">
-                    <button class="read-more">
-                      <i
-                        class="fa-solid fa-arrow-right-long"
-                        style="color: #3a0ca3"
-                      ></i>
-                    </button>
-                  </div>
-                </li>
-                <li class="splide__slide se8-card">
-                  <div class="relative-div">
-                    <img src="/img/blog4.jpg" alt="" />
-                    <div class="date">
-                      <p id="day-date">07</p>
-                      <p>Fri</p>
-                    </div>
-                  </div>
-                  <h3>5 Tips for First-Time Home Sellers</h3>
-                  <p>
-                    Etiam eget elementum elit. Aenean dignissim dapibus
-                    vestibulum
-                  </p>
-                  <div class="button-wrapper">
-                    <button class="read-more">
-                      <i
-                        class="fa-solid fa-arrow-right-long"
-                        style="color: #3a0ca3"
-                      ></i>
-                    </button>
-                  </div>
-                </li>
-                <li class="splide__slide se8-card">
-                  <div class="relative-div">
-                    <img src="/img/blog5.jpg" alt="" />
-                    <div class="date">
-                      <p id="day-date">21</p>
-                      <p>Wed</p>
-                    </div>
-                  </div>
-                  <h3>What's Next for Home Prices and Mortgage Rates?</h3>
-                  <p>
-                    Etiam eget elementum elit. Aenean dignissim dapibus
-                    vestibulum
-                  </p>
-                  <div class="button-wrapper">
-                    <button class="read-more">
-                      <i
-                        class="fa-solid fa-arrow-right-long"
-                        style="color: #3a0ca3"
-                      ></i>
-                    </button>
-                  </div>
-                </li>
-                <li class="splide__slide se8-card">
-                  <div class="relative-div">
-                    <img src="/img/blog6.jpg" alt="" />
-                    <div class="date">
-                      <p id="day-date">17</p>
-                      <p>Sat</p>
-                    </div>
-                  </div>
-                  <h3>The Top 2 Reasons To Consider a Newly Built Home</h3>
-                  <p>
-                    Etiam eget elementum elit. Aenean dignissim dapibus
-                    vestibulum
-                  </p>
-                  <div class="button-wrapper">
-                    <button class="read-more">
-                      <i
-                        class="fa-solid fa-arrow-right-long"
-                        style="color: #3a0ca3"
-                      ></i>
-                    </button>
-                  </div>
-                </li>
-              </ul>
+      </div>
+      <div id="cards-slider" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <li class="splide__slide se8-card">
+              <div class="relative-div">
+                <img src="./img/blog1.jpg" alt="" />
+                <div class="date">
+                  <p id="day-date">28</p>
+                  <p>Tue</p>
+                </div>
+              </div>
+              <h3>Top 10 Home Buying Mistakes to Avoid</h3>
+              <p>
+                Etiam eget elementum elit. Aenean dignissim dapibus vestibulum
+              </p>
+              <div class="button-wrapper">
+                <button class="read-more">
+                  <i
+                    class="fa-solid fa-arrow-right-long"
+                    style="color: #3a0ca3"
+                  ></i>
+                </button>
+              </div>
+            </li>
+            <li class="splide__slide se8-card">
+              <div class="relative-div">
+                <img src="./img/blog2.jpg" alt="" />
+                <div class="date">
+                  <p id="day-date">08</p>
+                  <p>Mon</p>
+                </div>
+              </div>
+              <h3>How to Stage Your Home for a Quick Sale</h3>
+              <p>
+                Etiam eget elementum elit. Aenean dignissim dapibus vestibulum
+              </p>
+              <div class="button-wrapper">
+                <button class="read-more">
+                  <i
+                    class="fa-solid fa-arrow-right-long"
+                    style="color: #3a0ca3"
+                  ></i>
+                </button>
+              </div>
+            </li>
+            <li class="splide__slide se8-card">
+              <div class="relative-div">
+                <img src="./img/blog4.jpg" alt="" />
+                <div class="date">
+                  <p id="day-date">07</p>
+                  <p>Fri</p>
+                </div>
+              </div>
+              <h3>5 Tips for First-Time Home Sellers</h3>
+              <p>
+                Etiam eget elementum elit. Aenean dignissim dapibus vestibulum
+              </p>
+              <div class="button-wrapper">
+                <button class="read-more">
+                  <i
+                    class="fa-solid fa-arrow-right-long"
+                    style="color: #3a0ca3"
+                  ></i>
+                </button>
+              </div>
+            </li>
+            <li class="splide__slide se8-card">
+              <div class="relative-div">
+                <img src="./img/blog5.jpg" alt="" />
+                <div class="date">
+                  <p id="day-date">21</p>
+                  <p>Wed</p>
+                </div>
+              </div>
+              <h3>What's Next for Home Prices and Mortgage Rates?</h3>
+              <p>
+                Etiam eget elementum elit. Aenean dignissim dapibus vestibulum
+              </p>
+              <div class="button-wrapper">
+                <button class="read-more">
+                  <i
+                    class="fa-solid fa-arrow-right-long"
+                    style="color: #3a0ca3"
+                  ></i>
+                </button>
+              </div>
+            </li>
+            <li class="splide__slide se8-card">
+              <div class="relative-div">
+                <img src="./img/blog6.jpg" alt="" />
+                <div class="date">
+                  <p id="day-date">17</p>
+                  <p>Sat</p>
+                </div>
+              </div>
+              <h3>The Top 2 Reasons To Consider a Newly Built Home</h3>
+              <p>
+                Etiam eget elementum elit. Aenean dignissim dapibus vestibulum
+              </p>
+              <div class="button-wrapper">
+                <button class="read-more">
+                  <i
+                    class="fa-solid fa-arrow-right-long"
+                    style="color: #3a0ca3"
+                  ></i>
+                </button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="splide__pagination"></div>
+      </div>
+      <div id="mobile_blog">
+        <div class="se8-card">
+          <div class="relative-div">
+            <img src="./img/blog1.jpg" alt="" />
+            <div class="date">
+              <p id="day-date">28</p>
+              <p>Tue</p>
             </div>
-            <div class="splide__pagination"></div>
+          </div>
+          <h3>Top 10 Home Buying Mistakes to Avoid</h3>
+          <p>Etiam eget elementum elit. Aenean dignissim dapibus vestibulum</p>
+          <div class="button-wrapper">
+            <button class="read-more">
+              <i
+                class="fa-solid fa-arrow-right-long"
+                style="color: #3a0ca3"
+              ></i>
+            </button>
+          </div>
+        </div>
+        <div class="se8-card">
+          <div class="relative-div">
+            <img src="./img/blog2.jpg" alt="" />
+            <div class="date">
+              <p id="day-date">08</p>
+              <p>Mon</p>
+            </div>
+          </div>
+          <h3>How to Stage Your Home for a Quick Sale</h3>
+          <p>Etiam eget elementum elit. Aenean dignissim dapibus vestibulum</p>
+          <div class="button-wrapper">
+            <button class="read-more">
+              <i
+                class="fa-solid fa-arrow-right-long"
+                style="color: #3a0ca3"
+              ></i>
+            </button>
+          </div>
+        </div>
+        <div class="se8-card">
+          <div class="relative-div">
+            <img src="./img/blog4.jpg" alt="" />
+            <div class="date">
+              <p id="day-date">07</p>
+              <p>Fri</p>
+            </div>
+          </div>
+          <h3>5 Tips for First-Time Home Sellers</h3>
+          <p>Etiam eget elementum elit. Aenean dignissim dapibus vestibulum</p>
+          <div class="button-wrapper">
+            <button class="read-more">
+              <i
+                class="fa-solid fa-arrow-right-long"
+                style="color: #3a0ca3"
+              ></i>
+            </button>
           </div>
         </div>
       </div>
@@ -718,7 +759,7 @@
             <div class="splide__track">
               <ul class="splide__list">
                 <li class="splide__slide review-card">
-                  <img id="thonjez" src="/img/“.png" alt="" />
+                  <img id="thonjez" src="./img/“.png" alt="" />
                   <h4>
                     I highly recommend Jodi J. Appleby. She was attentive to our
                     needs and worked tirelessly to find us the perfect home. We
@@ -726,7 +767,7 @@
                   </h4>
                   <div class="author-review">
                     <div id="author-wrapper">
-                      <img src="/img/author1.jpg" alt="" />
+                      <img src="./img/author1.jpg" alt="" />
                       <p id="name">Barbara D.Smith</p>
                     </div>
                     <div id="star-wrap">
@@ -739,15 +780,15 @@
                   </div>
                 </li>
                 <li class="splide__slide review-card">
-                  <img id="thonjez" src="/img/“.png" alt="" />
+                  <img id="thonjez" src="./img/“.png" alt="" />
                   <h4>
-                    I highly recommend Jodi J. Appleby. She was attentive to our
-                    needs and worked tirelessly to find us the perfect home. We
-                    couldn't be happier with our new place!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Tempora laborum voluptas ab ut atque corrupti necessitatibus
+                    dolorum harum aspernatur est!
                   </h4>
                   <div class="author-review">
                     <div id="author-wrapper">
-                      <img src="/img/author1.jpg" alt="" />
+                      <img src="./img/author1.jpg" alt="" />
                       <p id="name">Barbara D.Smith</p>
                     </div>
                     <div id="star-wrap">
@@ -760,15 +801,15 @@
                   </div>
                 </li>
                 <li class="splide__slide review-card">
-                  <img id="thonjez" src="/img/“.png" alt="" />
+                  <img id="thonjez" src="./img/“.png" alt="" />
                   <h4>
-                    I highly recommend Jodi J. Appleby. She was attentive to our
-                    needs and worked tirelessly to find us the perfect home. We
-                    couldn't be happier with our new place!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Inventore hic repudiandae eaque ratione molestiae dolore,
+                    laudantium eius ipsum minima consequatur.
                   </h4>
                   <div class="author-review">
                     <div id="author-wrapper">
-                      <img src="/img/author1.jpg" alt="" />
+                      <img src="./img/author1.jpg" alt="" />
                       <p id="name">Barbara D.Smith</p>
                     </div>
                     <div id="star-wrap">
@@ -788,7 +829,7 @@
     </section>
     <section class="section container">
       <div class="banner">
-        <img src="/img/removed-bg.png" alt="" />
+        <img src="./img/removed-bg.png" alt="" />
         <div class="banner-txt">
           <h2>Become a Agent.</h2>
           <p>
@@ -802,14 +843,7 @@
     <section class="section se10">
       <div class="se-final container">
         <div class="contact-final">
-          <div>
-            <button id="rezilla-icon">
-              <img
-                src="/img/reshot-icon-house-XJ53QBRVTC 1.svg"
-                alt=""
-              /></button
-            ><span id="icon-text">Rezilla</span>
-          </div>
+          <img src="./img/Group 86.svg" alt="" />
           <h5>2728 Hickory StreetSalt Lake City, UT 84104</h5>
           <h5><i class="fa-solid fa-phone"></i> +1 206-214-2298</h5>
           <h5><i class="fa-solid fa-envelope"></i> support@rezilla.com</h5>
@@ -852,24 +886,26 @@
           </div>
           <div class="follow-us">
             <h4>Follow Us On</h4>
-            <a href=""
-              ><i
-                class="fa-brands fa-linkedin-in fa-xl"
-                style="color: #3a0ca3"
-              ></i
-            ></a>
-            <a href=""
-              ><i
-                class="fa-brands fa-facebook-f fa-xl"
-                style="color: #3a0ca3"
-              ></i
-            ></a>
-            <a href=""
-              ><i
-                class="fa-brands fa-instagram fa-xl"
-                style="color: #3a0ca3"
-              ></i
-            ></a>
+            <div id="socials">
+              <a href=""
+                ><i
+                  class="fa-brands fa-linkedin-in fa-xl"
+                  style="color: #3a0ca3"
+                ></i
+              ></a>
+              <a href=""
+                ><i
+                  class="fa-brands fa-facebook-f fa-xl"
+                  style="color: #3a0ca3"
+                ></i
+              ></a>
+              <a href=""
+                ><i
+                  class="fa-brands fa-instagram fa-xl"
+                  style="color: #3a0ca3"
+                ></i
+              ></a>
+            </div>
           </div>
         </div>
       </div>
