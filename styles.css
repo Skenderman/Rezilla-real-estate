@@ -154,6 +154,12 @@ img {
   border-radius: 50px;
   border: 1px solid var(--primary-color);
 }
+#login:active {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 26px;
+  border-radius: 50px;
+}
 .header-mobile {
   display: none;
 }
@@ -246,24 +252,7 @@ img {
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
 }
-/* #sale {
-  color: var(--text-color-3);
-  font-weight: 500;
-  border-bottom: 1px solid var(--text-color-3);
-  padding: 40px 40px 29px;
-  margin-right: 20px;
-}
-#sale:hover {
-  color: var(--primary-color);
-  border-bottom: 3px solid var(--primary-color);
-}
 
-#rent {
-  color: var(--primary-color);
-  font-weight: 500;
-  border-bottom: 3px solid var(--primary-color);
-  padding: 40px 40px 29px;
-} */
 .form {
   display: flex;
   flex-direction: column;
@@ -284,7 +273,9 @@ img {
   color: var(--text-color-4);
 }
 #property-type,
-#room-type {
+#room-type,
+#lease-term,
+#furnishing {
   background-color: rgba(212, 212, 212, 0.2) !important;
   padding: 21px 95px 21px 20px;
   border-radius: 30px;
@@ -293,7 +284,9 @@ img {
   background: url(/img/Polygon\ 1.png) 97% center no-repeat;
 }
 #property-type:focus,
-#room-type:focus {
+#room-type:focus,
+#lease-term:focus,
+#furnishing:focus {
   outline-style: none;
 }
 select:invalid {
@@ -512,6 +505,15 @@ option {
   padding: 0 80px;
   margin: 0;
 }
+#s3-r > button:nth-child(1):hover,
+#s3-r > button:nth-child(2):hover,
+#s3-r > button:nth-child(3):active {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 15px 26px;
+  border-radius: 50px;
+}
+
 #s3-r > button {
   margin-right: 15px;
 }
